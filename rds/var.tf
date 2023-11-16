@@ -12,3 +12,16 @@ variable "tags" {
     type = map(string)
     description = "tags"
 }
+
+variable "vpc_id" {
+    type = string
+    description = "vpc id"
+}
+
+variable "vpc_cidr" {
+    type = string
+    description = "cidr range"
+}
+
+
+

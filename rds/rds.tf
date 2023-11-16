@@ -12,14 +12,14 @@ resource "aws_db_subnet_group" "db_subnet_group" {
 resource "aws_security_group" "rds_sg" {
   name        = "${var.tags["project"]}-${var.tags["application"]}-${var.tags["environment"]}-rds-sg"
   description = "Allow db traffic"
-  vpc_id      = var.vpc_id
+  vpc_id      =var.vpc_id
 
   ingress {
     description      = "DB port"
     from_port        = 3306
     to_port          = 3306
     protocol         = "tcp"
-    cidr_blocks      = [var.vpc_cidr]
+    cidr_blocks      =[var.vpc_cidr]
   }
 
   egress {
